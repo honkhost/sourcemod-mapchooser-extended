@@ -1,0 +1,23 @@
+project:
+  name: sourcemod-mapchooser-extended
+  dependencies:
+    - name: sourcemod
+      type: tar
+      version: 1.10.0-git6528
+      location: https://sm.alliedmods.net/smdrop/1.10/sourcemod-1.10.0-git6528-linux.tar.gz
+      unpack:
+      - source: /addons
+        dest: /addons
+    - name: multicolors
+      type: git
+      repo: https://github.com/Bara/Multi-Colors.git
+      unpack:
+        - source: /addons/sourcemod/scripting/include
+          dest: /addons/sourcemod/scripting/include
+  root: /sourcemod-mapchooser-extended
+  targets:
+    - mapchooser_extended
+    - nominations_extended
+    - rockthevote_extended
+  output: /sourcemod-mapchooser-extended/addons/sourcemod/plugins
+

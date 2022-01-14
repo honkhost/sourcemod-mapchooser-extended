@@ -37,7 +37,7 @@
 #include <mapchooser_extended>
 #include <multicolors>
 #undef REQUIRE_PLUGIN
-#tryinclude <shavit>
+// #tryinclude <shavit>
 #pragma semicolon 1
 #pragma newdecls required
 
@@ -804,14 +804,15 @@ stock bool IsNominateAllowed(int client)
 int GetTier(char[] mapname)
 {
 	int tier = 0;
-	if (g_bBhopTimer) 
-	{
-		char mapdisplay[PLATFORM_MAX_PATH + 32];
-		GetMapDisplayName(mapname, mapdisplay, sizeof(mapdisplay));
-		tier = Shavit_GetMapTier(mapdisplay);
-	}
+	// if (g_bBhopTimer) 
+	// {
+	// 	char mapdisplay[PLATFORM_MAX_PATH + 32];
+	// 	GetMapDisplayName(mapname, mapdisplay, sizeof(mapdisplay));
+	// 	tier = Shavit_GetMapTier(mapdisplay);
+	// }
 	
-	else if (GetConVarBool(g_Cvar_DisplayName))
+	// else if (GetConVarBool(g_Cvar_DisplayName))
+	if (GetConVarBool(g_Cvar_DisplayName))
 	{
 		char mapDisplay[PLATFORM_MAX_PATH];
 		GetMapName(mapname, mapDisplay, sizeof(mapDisplay));
